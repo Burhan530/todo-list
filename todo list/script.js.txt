@@ -1,0 +1,17 @@
+function addTask(){
+         let taskInput =
+document.getElementById("taskinput");
+         let taskValue = taskInput.value.trim();
+         if (taskValue === "") return;
+
+         let li = document.createElement("li");
+         li.textContent = taskValue;
+
+         li.addEventListener("click", function ()
+{
+                li.remove();
+         });
+
+document.getElementById("taskList").appendChild(li);
+      taskInput.value = "";
+}
